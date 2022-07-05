@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Check number for Even OR Odd</h1>
+    <form onsubmit="calculate(); return false">
+        <label for="Numbercheck">write Number</label>
+        <input type="number" min="1" required id="oddeven" placeholder="write Number">
+        <button type="Check">Check</button>
+    </form>
+    <h3 id="show"></h3>
+
+
+    <script>
+        function calculate() {
+            let num = document.getElementById('oddeven').value;
+
+
+            if ((num % 2) === 0) {
+                num = document.getElementById('show').innerHTML = `Hurray! Your ${num} is an even number`;
+
+            } else {
+                num = document.getElementById('show').innerHTML = `Ooops! Your ${num} is an Odd number`;
+            }
+        }
+        // let Numbercheck = document.querySelector("#Numbercheck").value;
+        // if (Numbercheck % 2 == 0) {
+        //     document.querySelector("#Numbercheck").innerHTML = `you have total Avarge Number is ${Numbercheck}%`;
+        // } else {
+        //     document.querySelector("#Numbercheck").innerHTML = `you have total Avarg is ${Numbercheck}%`;
+        // }
+        // let Check = parseInt(Numbercheck) % 2;
+        // let result = Check == 0;
+        // document.querySelector("#result").innerHTML = `you have total Avarge Number is ${result}%`;
+    </script>
+</body>
+
+</html>
